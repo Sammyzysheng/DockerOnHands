@@ -11,17 +11,18 @@ Docker run -i -t imageName:tag ls /
 //Or
 Docker run -d imageName:tag commands
 //Run in background to enable commands for other usage
+
+```
+## Docker images
+```DockerFile
+docker history imageName:tag
+//show the layers of an image
 Docker ps
 //Show all images running
 Docker ps -a
 //Show all images 
 Docker inspect containerID
 //show detailed container info
-```
-## Docker images
-```DockerFile
-docker history imageName:tag
-//show the layers of an image
 ``` 
 ### Build a docker image
 ### Step 1: spin up a container from base image 
