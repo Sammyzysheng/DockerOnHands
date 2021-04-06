@@ -1,6 +1,6 @@
 ## Start and run a container by an image from remote registry
 ```DockerFile
-Docker run imageName:tag 
+Docker run --name containerName imageName:tag 
 Docker run -i -t imageName:tag 
 //Run in foreground
 ls
@@ -13,4 +13,6 @@ Docker run -d imageName:tag commands
 //Run in background to enable commands for other usage
 Docker ps
 //Show all images running
+Docker ps -a
+//Show all images 
 ```
