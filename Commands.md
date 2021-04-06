@@ -15,4 +15,6 @@ Docker ps
 //Show all images running
 Docker ps -a
 //Show all images 
+Docker inspect containerID
+//show detailed container info
 ```
