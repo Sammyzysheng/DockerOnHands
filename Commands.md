@@ -35,6 +35,6 @@ apt-get update && apt-get install git
 ```
 ### Step 3 :commit changes made in container
 ```DockerFile
-docker commit containerName imageName:tag
+docker commit containerID(docker ps -a ) imageName:tag 
 //save changes made to docker image
 ```
