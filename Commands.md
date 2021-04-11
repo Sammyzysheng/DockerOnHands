@@ -1,5 +1,5 @@
 ## Start and run a container by an image from remote registry
-```DockerFile
+```cmd
 docker run --name containerName imageName:tag 
 docker run -i -t imageName:tag 
 //Run in foreground
@@ -14,7 +14,7 @@ docker run -d imageName:tag commands
 
 ```
 ## Docker images
-```DockerFile
+```cmd
 docker history imageName:tag
 //show the layers of an image
 docker ps
@@ -34,17 +34,17 @@ RUN apt-get update && apt-get install -y git
 CMD ["echo","Hello World"]
 ```
 ### Step 2:Building an image
-```DockerFile
+```cmd
 //Building an image using local Dockerfile
 docker build -t newImagename .
 ```
 ### Step 3 :start container services
-```DockerFile
+```cmd
 docker run newImageID .
 ```
 ### Build a docker image using docker commit command
 ### Step 1: spin up a container from base image 
-```DockerFile
+```cmd
 docker run --name containerName -d newImageName:newTag
 ls
 ```
