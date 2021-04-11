@@ -31,13 +31,18 @@ docker inspect containerID
 FROM originalimage:tag
 RUN apt-get update && apt-get install -y git
 //using debian/ubuntu tools
+CMD ["echo","Hello World"]
 ```
 ### Step 2:Building an image
 ```DockerFile
 //Building an image using local Dockerfile
-docker build -d newImagename .
+docker build -t newImagename .
 ```
-###
+### Step 3 :start container services
+```DockerFile
+docker run newImageID .
+```
+### Build a docker image 
 ### Step 1: spin up a container from base image 
 ```DockerFile
 docker run --name containerName -d newImageName:newTag
