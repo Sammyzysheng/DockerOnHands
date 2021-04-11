@@ -42,7 +42,7 @@ docker build -t newImagename .
 ```DockerFile
 docker run newImageID .
 ```
-### Build a docker image 
+### Build a docker image using docker commit command
 ### Step 1: spin up a container from base image 
 ```DockerFile
 docker run --name containerName -d newImageName:newTag
