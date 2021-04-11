@@ -24,7 +24,7 @@ docker ps -a
 docker inspect containerID
 //show detailed container info
 ``` 
-### Build a docker image using Dockerfile
+## Build a docker image using Dockerfile
 
 ### Step 1: Writing a local dockerfile
 ```DockerFile
@@ -42,7 +42,7 @@ docker build -t newImagename .
 ```cmd
 docker run newImageID 
 ```
-### Build a docker image using docker commit command
+## Build a docker image using docker commit command
 ### Step 1: spin up a container from base image 
 ```cmd
 docker run --name containerName -d newImageName:newTag
@@ -56,4 +56,11 @@ ls
 ```DockerFile
 docker commit containerID(docker ps -a ) newImageName:newTag
 //save changes made to docker image
+```
+## Push image to docker hub
+```cmd
+docker tag imageID nameofImage:tagofImage
+docker login --username=username
+password:
+docker push imageName:tag(docker images)
 ```
