@@ -24,20 +24,28 @@ docker ps -a
 docker inspect containerID
 //show detailed container info
 ``` 
-### Build a docker image
-### Step 1: spin up a container from base image 
+### Build a docker image using Dockerfile
+
+### Step 1: Writing a local dockerfile
+```DockerFile
+FROM originalimage:tag
+RUN apt-get update && apt-get install -y git
+//using debian/ubuntu tools
+```
+### Step 2:Building an image
 ```DockerFile
 //Building an image using local Dockerfile
 docker build -d newImagename .
-//Or building exising container
+```
+###
+### Step 1: spin up a container from base image 
+```DockerFile
 docker run --name containerName -d newImageName:newTag
 ls
 ```
 ### Step 2: install git package in the container
 ```DockerFile
-FROM originalimage:tag
-RUN apt-get update && apt-get install -y git
-//using debian/ubuntu tools
+ apt-get update && apt-get install -y git
 ```
 ### Step 3 :commit changes made in container
 ```DockerFile
