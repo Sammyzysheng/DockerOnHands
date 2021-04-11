@@ -40,7 +40,7 @@ docker build -t newImagename .
 ```
 ### Step 3 :start container services
 ```cmd
-docker run newImageID .
+docker run newImageID 
 ```
 ### Build a docker image using docker commit command
 ### Step 1: spin up a container from base image 
