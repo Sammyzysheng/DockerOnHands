@@ -32,6 +32,8 @@ FROM originalimage:tag
 RUN apt-get update && apt-get install -y git
 //using debian/ubuntu tools
 CMD ["echo","Hello World"]
+//Copy files from a location to another
+COPY filelocation movedToLocation
 ```
 ### Step 2:Building an image
 ```cmd
