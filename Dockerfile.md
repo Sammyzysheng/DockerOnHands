@@ -7,14 +7,15 @@ docker build  -t /pathToSaveNewImage . # use -t to tage a place to save new iamg
 ```
 ### Build Format
 #### comment
-``# comment
+```
+# comment
 INSTRUCTION arguments
 ```
+
 #### Case
 dockerfile is not case sensitive but default Upper case instruction
 #### WhiteSpaces
 ```
-
 # WhiteSpaces: Instructions and comments are not affected by whicte spaces, but arguments whitespaces do matter
 RUN echo "hello\
      world"
