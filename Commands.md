@@ -78,3 +78,7 @@ docker push imageName:tag(docker images)
 ```
 docker start -a containerID
 ```
+#### Delete all stopped container
+```
+docker system prune
+```
