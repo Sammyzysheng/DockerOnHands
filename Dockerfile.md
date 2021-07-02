@@ -27,4 +27,4 @@ RUN echo "hello\
 
 ```
 #### new line
-add "\" at end of line to combine two lines into one instruction
+add  \ at end of line to combine two lines into one instruction
