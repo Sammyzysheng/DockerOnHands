@@ -1,7 +1,9 @@
 ## Start and run a container by an image from remote registry
+Container is an instance of image with startup commands
+
 ```cmd
 docker create --name containerName imageName:tag  
-docker run containerID 
+docker run -a containerID 
 # docker create + docker start = docker run 
 docker run --name containerName imageName:tag 
 docker run -i -t imageName:tag 
@@ -68,4 +70,9 @@ docker tag imageID nameofImage:tagofImage
 docker login --username=username
 password:
 docker push imageName:tag(docker images)
+```
+## Other commands
+#### Restart a stopped container
+```
+docker start -a containerID
 ```
