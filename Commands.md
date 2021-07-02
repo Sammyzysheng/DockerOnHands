@@ -1,5 +1,8 @@
 ## Start and run a container by an image from remote registry
 ```cmd
+docker create --name containerName imageName:tag  
+docker run containerID 
+# docker create + docker start = docker run 
 docker run --name containerName imageName:tag 
 docker run -i -t imageName:tag 
 //Run in foreground
