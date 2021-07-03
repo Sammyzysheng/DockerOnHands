@@ -98,6 +98,6 @@ docker execuetev -it containerID command
 ### Getting a command prompt in c caontainer
 go inside command prommpt
  ```
- docker execuetev -it containerID sh
+ docker exec -it containerID sh
  ```
  
