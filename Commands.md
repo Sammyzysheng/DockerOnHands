@@ -82,3 +82,22 @@ docker start -a containerID
 ```
 docker system prune
 ```
+#### Stop Kill a running container
+```
+docker stop containerID
+docker kill containerID
+```
+### Multi-command Containers
+start up a second program\
+eg. run redis using docker, run redis cli using the same container
+```
+docker run redis
+# run redis-cli in redis-server container
+docker execuetev -it containerID command
+```
+### Getting a command prompt in c caontainer
+go inside command prommpt
+ ```
+ docker execuetev -it containerID sh
+ ```
+ 
