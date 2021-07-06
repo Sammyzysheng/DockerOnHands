@@ -6,6 +6,18 @@ docker build  -t /pathToSaveNewImage . # use -t to tage a place to save new iamg
 
 ```
 ### Build Format
+### Sample Docker File
+```
+FROM alpine
+
+# Step 2: Download and install dependency
+
+RUN apk add --update redis
+
+# Step 3: Tell the image what to do when it starts as container
+
+CMD ["redis-server"]
+```
 #### comment
 ```
 # comment
