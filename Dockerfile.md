@@ -21,7 +21,7 @@ RUN apk add --update redis
 CMD ["redis-server"]
 ```
 ### Build Process
-Each line of Dockerfile will get image from last instruction -> create a container of the image -> run commands in the conainer -> take snapshot of the container to get image ready for next instruction
+Each line of Dockerfile will get image from last instruction -> create a container of the image -> run commands in the conainer -> take snapshot of the container , save as cache in FS -> delete temporary container -> get image ready for next instruction
 
 ### Build Format
 
