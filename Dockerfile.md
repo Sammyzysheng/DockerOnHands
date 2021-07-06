@@ -5,12 +5,14 @@ docker built -f /pathToDockerfile . # build from dockerfile in your file system
 docker build  -t /pathToSaveNewImage . # use -t to tage a place to save new iamge once built
 
 ```
-### Build Format
 ### Sample Docker File
 ```
+# Alpine Linux is a small, security-oriented, lightweight Linux distribution based on the musl libc library and BusyBox utilities platform instead of GNU
 FROM alpine
 
 # Step 2: Download and install dependency
+
+# apk : apache package manager in Alphine lib to help download pacakge
 
 RUN apk add --update redis
 
@@ -18,6 +20,11 @@ RUN apk add --update redis
 
 CMD ["redis-server"]
 ```
+### Build Process
+Each line of Dockerfile will get image from last instruction -> create a container of the image -> run commands in the conainer -> take snapshot of the container to get image ready for next instruction
+
+### Build Format
+
 #### comment
 ```
 # comment
