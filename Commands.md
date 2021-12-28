@@ -78,6 +78,10 @@ docker push imageName:tag(docker images)
 ```
 docker start -a containerID
 ```
+#### remove all untagged images to avoid images build up
+```
+docker images -q --filter "dangling=true" | xargs docker rmi
+```
 #### Delete all stopped container
 ```
 docker system prune
