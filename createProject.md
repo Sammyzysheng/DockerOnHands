@@ -1,11 +1,12 @@
 ```Dockerfile
 # Specify a base image
 FROM node:alpine
-
+# specify the working dir in container
 WORKDIR /usr/app
-
+COPY ./package.json ./
 # Install some depenendencies
 RUN npm install
+COPY ./ ./
 
 # Default command
 CMD ["npm", "start"]
@@ -24,3 +25,15 @@ Solution: \
 docker build -t imagename .
 docker run -p 8080:8080 imagename 
 ```
+### start a shell to enable debug
+```Dockerfile
+docker run -it imagename sh
+```
+### specify working directory
+not best practice to copy files/folders to root directory of container\
+because there may be some conflixts in folder names\
+Solution: specify a working dir that's a subdirectory\
+then when copy it will copy to working dir
+### avoid uneccessary rebuilds
+commands in dockerfile will be rebuild if changes were made that affect commands before\
+COPY unchanged files before npm install to avoid rebuild
